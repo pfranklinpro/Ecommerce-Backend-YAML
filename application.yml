@@ -1,0 +1,20 @@
+# https://www.baeldung.com/spring-yaml
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: ecommerce
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://database-2.c38w7eg9tw2e.us-east-1.rds.amazonaws.com:5432/postgres?currentSchema=ecommerce
+    username: postgres
+    password: i2CcmUf4epu8pZ2s1R2N
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    show-sql: true
+    hibernate:
+      # hibernate will drop and create your tables whenever you start your application.
+      ddl-auto: create-drop
